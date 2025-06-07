@@ -8,13 +8,25 @@
 
 This project is more than just a static collection; it's an active learning tool where I translate theoretical knowledge into practical code.
 
-## 🎯 Objectives
+## 🎯 Core Principles & Objectives
 
-My primary goals for "The Library" are:
+**Core Principles:**
+
+- **Modularity:** Components are designed to be as independent as possible to promote reusability.
+
+- **Testing:** All mathematical operations must have corresponding unit tests to ensure correctness and prevent regressions.
+
+- **Documentation:** Public-facing classes, methods, and functions will have clear docstrings explaining their purpose, parameters, and return values.
+
+- **Version Control:** Git is used from the start, with a convention of frequent, clear commit messages.
+
+- **Mathematical Precision:** All implemented formulas and algorithms are checked against reliable sources to ensure accuracy.
+
+**Primary Goals**:
 
 *   **Deepen Understanding:** To solidify my grasp of algebric and quantitative/analytic concepts by implementing them programmatically. The act of coding a concept forces a deeper level of understanding.
 *   **Language Proficiency:** To learn and improve my skills in both **Python** and **Java** by developing two separate, parallel versions of this application. This will allow me to compare implementations and understand language-specific nuances.
-*   **Reusable Resource:** To potentially develop this into a robust library that I can leverage for other personal projects requiring mathematical or scientific computations.
+*   **Useful Resource:** To potentially develop this into a robust library that I can leverage for other personal projects requiring mathematical or scientific computations.
 *   **Track Progress:** To serve as a tangible record of my learning and development in various STEM fields.
 
 ## 🚀 Current Plans & Roadmap
@@ -54,7 +66,7 @@ My development plan is structured as follows:
 ## 💻 Technologies
 
 *   **Primary Languages:** Python, Java
-*   **Potential UI (Python):** Libraries like Tkinter, PyQt, Kivy, or even a web framework like Flask/Django for a local web app.
+*   **Potential UI (Python):** Libraries like Tkinter, PyQt, Kivy, or even a web framework like Flask/Django for a local web app. (mostly gonna go with the web app)
 *   **Potential UI (Java):** Libraries like Swing, JavaFX.
 *   **Plotting/Visualization (Python):** Matplotlib, Seaborn, Plotly.
 *   **Plotting/Visualization (Java):** JFreeChart, or libraries that can bridge to JavaScript plotting if using JavaFX webview.
@@ -68,8 +80,14 @@ My development plan is structured as follows:
     TheLibrary/
     ├── .gitignore
     ├── LICENSE                                        # MIT probably ?
-    └── README.md
-
+    ├── README.md                                 
+    ├── IDEAS.md                                # <-- NEW: Brainstorming Log for future concepts.
+    │
+    ├── docs/                                     # <-- NEW: Project dashboard and documentation site.
+    │   ├── index.html                          # The main project index.
+    │   ├── style.css                           # Styles for the index.
+    │   └── script.js                           # Scripts for interactivity (filtering tags, etc.).
+    │ 
     └── src/
         ├── python/
         │   ├── __main__.py
@@ -179,7 +197,6 @@ My development plan is structured as follows:
                                         └── MatrixTest.java
     
 </details>
-
 
 
 
