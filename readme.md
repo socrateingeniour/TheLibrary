@@ -76,125 +76,128 @@ My development plan is structured as follows:
 <details>
 <summary>Click to view the full directory structure</summary>
 
-    
     TheLibrary/
+    ├── .gitattributes
     ├── .gitignore
-    ├── LICENSE                                        # MIT probably ?
-    ├── README.md                                 
-    ├── IDEAS.md                                # <-- NEW: Brainstorming Log for future concepts.
+    ├── build.gradle.kts
+    ├── settings.gradle.kts
+    ├── gradlew
+    ├── gradlew.bat
+    ├── gradle/
     │
-    ├── docs/                                     # <-- NEW: Project dashboard and documentation site.
-    │   ├── index.html                          # The main project index.
-    │   ├── style.css                           # Styles for the index.
-    │   └── script.js                           # Scripts for interactivity (filtering tags, etc.).
-    │ 
+    ├── LICENSE                                                     # MIT probably ?
+    ├── README.md
+    ├── IDEAS.md                                                    # Brainstorming Log for future concepts.
+    │
+    ├── docs/                                                       # Project dashboard and documentation site.
+    │   ├── index.html                                              # The main project index.
+    │   ├── style.css                                               # Styles for the index.
+    │   └── script.js                                               # Scripts for interactivity (filtering tags, etc.).
+    │
     └── src/
-        ├── python/
-        │   ├── __main__.py
-        │   ├── requirements.txt
-        │   ├── tests/
-        │   │   ├── __init__.py
-        │   │   ├── mathematics/
-        │   │   │   ├── __init__.py
-        │   │   │   ├── foundations/
-        │   │   │   │   └── test_number_theory.py
-        │   │   │   └── algebra/
-        │   │   │       ├── test_polynomial.py
-        │   │   │       └── linear_algebra/
-        │   │   │           ├── test_vector.py
-        │   │   │           └── test_matrix.py
-        │   │
-        │   └── lib/
-        │       ├── __init__.py
+        ├── java/
+        │   └── src/
+        │       ├── main/
+        │       │   ├── java/
+        │       │   │   └── com/socrateingenieour/thelibrary/
+        │       │   │       ├── Main.java
+        │       │   │       │
+        │       │   │       ├── mathematics/                        # Section: Mathematics
+        │       │   │       │   ├── package-info.java
+        │       │   │       │   │
+        │       │   │       │   ├── foundations/                    # Shelf 1: Foundations
+        │       │   │       │   │   ├── package-info.java
+        │       │   │       │   │   ├── SetTheory.java
+        │       │   │       │   │   ├── Combinatorics.java
+        │       │   │       │   │   └── NumberTheory.java
+        │       │   │       │   │
+        │       │   │       │   ├── algebra/                        # Shelf 2: Algebra
+        │       │   │       │   │   ├── package-info.java
+        │       │   │       │   │   ├── abstract_structures/
+        │       │   │       │   │   │   ├── Group.java
+        │       │   │       │   │   │   └── Ring.java
+        │       │   │       │   │   ├── Polynomial.java
+        │       │   │       │   │   └── linear_algebra/
+        │       │   │       │   │       ├── package-info.java
+        │       │   │       │   │       ├── Vector.java
+        │       │   │       │   │       ├── Matrix.java
+        │       │   │       │   │       └── Determinant.java
+        │       │   │       │   │
+        │       │   │       │   ├── analysis/                       # Shelf 3: Analysis
+        │       │   │       │   │   ├── package-info.java
+        │       │   │       │   │   ├── Sequence.java
+        │       │   │       │   │   ├── Calculus.java
+        │       │   │       │   │   └── DifferentialEquation.java
+        │       │   │       │   │
+        │       │   │       │   └── geometry/                       # Shelf 4: Geometry
+        │       │   │       │       ├── package-info.java
+        │       │   │       │       └── EuclideanSpace.java
+        │       │   │       │
+        │       │   │       └── physics/
+        │       │   │           └── package-info.java
+        │       │   │
+        │       │   └── resources/
         │       │
-        │       ├── mathematics/                      # Section: Mathematics
-        │       │   ├── __init__.py
-        │       │   │
-        │       │   ├── foundations/                  # Shelf 1: Foundations
-        │       │   │   ├── __init__.py
-        │       │   │   ├── set_theory.py
-        │       │   │   ├── combinatorics.py
-        │       │   │   └── number_theory.py
-        │       │   │
-        │       │   ├── algebra/                      # Shelf 2: Algebra
-        │       │   │   ├── __init__.py
-        │       │   │   ├── abstract_structures.py
-        │       │   │   ├── polynomials.py
-        │       │   │   └── linear_algebra/
-        │       │   │       ├── __init__.py
-        │       │   │       ├── vector.py
-        │       │   │       ├── matrix.py
-        │       │   │       └── determinant.py
-        │       │   │
-        │       │   ├── analysis/                     # Shelf 3: Analysis
-        │       │   │   ├── __init__.py
-        │       │   │   ├── sequences_and_series.py
-        │       │   │   ├── calculus.py
-        │       │   │   └── differential_equations.py
-        │       │   │
-        │       │   └── geometry/                     # Shelf 4: Geometry
-        │       │       ├── __init__.py
-        │       │       └── euclidean_space.py
-        │       │
-        │       └── physics/                          # Section: Physics (Ready for future expansion)
-        │           ├── __init__.py
-        │           └── mechanics/
-        │               ├── __init__.py
-        │               └── kinematics.py
+        │       └── test/
+        │           ├── java/
+        │           │   └── com/socrateingenieour/thelibrary/
+        │           │       └── mathematics/
+        │           │           └── algebra/
+        │           │               └── linear_algebra/
+        │           │                   ├── VectorTest.java
+        │           │                   └── MatrixTest.java
+        │           └── resources/
         │
-        └── java/
-            ├── pom.xml
-            └── src/
-                ├── main/
-                │   └── java/
-                │       └── com/socrateingenieour/thelibrary/
-                │           ├── Main.java
-                │           │
-                │           ├── mathematics/                  # Section: Mathematics
-                │           │   ├── package-info.java
-                │           │   │
-                │           │   ├── foundations/              # Shelf 1: Foundations
-                │           │   │   ├── package-info.java
-                │           │   │   ├── SetTheory.java
-                │           │   │   └── NumberTheory.java
-                │           │   │
-                │           │   ├── algebra/                  # Shelf 2: Algebra
-                │           │   │   ├── package-info.java
-                │           │   │   ├── abstract_structures/
-                │           │   │   │    ├── package-info.java
-                │           │   │   │    ├── Group.java
-                │           │   │   │    └── Ring.java
-                │           │   │   ├── Polynomial.java
-                │           │   │   └── linear_algebra/
-                │           │   │       ├── package-info.java
-                │           │   │       ├── Vector.java
-                │           │   │       ├── Matrix.java
-                │           │   │       └── Determinant.java
-                │           │   │
-                │           │   ├── analysis/                 # Shelf 3: Analysis
-                │           │   │   ├── package-info.java
-                │           │   │   ├── Sequence.java
-                │           │   │   ├── Calculus.java
-                │           │   │   └── DifferentialEquation.java
-                │           │   │
-                │           │   └── geometry/                 # Shelf 4: Geometry
-                │           │       ├── package-info.java
-                │           │       └── EuclideanSpace.java
-                │           │
-                │           └── physics/                      # Section: Physics (Ready)
-                │               ├── package-info.java
-                │               └── mechanics/
-                │                   ├── package-info.java
-                │                   └── Kinematics.java
-                │
-                └── test/
-                    └── java/
-                        └── com/socrateingenieour/thelibrary/
-                            └── mathematics/
-                                └── algebra/
-                                    └── linear_algebra/
-                                        ├── VectorTest.java
-                                        └── MatrixTest.java
+        └── python/
+            ├── __main__.py
+            ├── requirements.txt
+            │
+            ├── lib/
+            │   ├── __init__.py
+            │   │
+            │   ├── mathematics/                                    # Section: Mathematics
+            │   │   ├── __init__.py
+            │   │   │
+            │   │   ├── foundations/                                # Shelf 1: Foundations
+            │   │   │   ├── __init__.py
+            │   │   │   ├── set_theory.py
+            │   │   │   ├── combinatorics.py
+            │   │   │   └── number_theory.py
+            │   │   │
+            │   │   ├── algebra/                                    # Shelf 2: Algebra
+            │   │   │   ├── __init__.py
+            │   │   │   ├── abstract_structures.py
+            │   │   │   ├── polynomials.py
+            │   │   │   └── linear_algebra/
+            │   │   │       ├── __init__.py
+            │   │   │       ├── vector.py
+            │   │   │       ├── matrix.py
+            │   │   │       └── determinant.py
+            │   │   │
+            │   │   ├── analysis/                                   # Shelf 3: Analysis
+            │   │   │   ├── __init__.py
+            │   │   │   ├── sequences_and_series.py
+            │   │   │   ├── calculus.py
+            │   │   │   └── differential_equations.py
+            │   │   │
+            │   │   └── geometry/                                   # Shelf 4: Geometry
+            │   │       ├── __init__.py
+            │   │       └── euclidean_space.py
+            │   │
+            │   └── physics/
+            │       └── __init__.py
+            │
+            └── tests/
+                ├── __init__.py
+                └── mathematics/
+                    ├── __init__.py
+                    ├── foundations/
+                    │   └── test_number_theory.py
+                    └── algebra/
+                        ├── test_polynomial.py
+                        └── linear_algebra/
+                            ├── test_vector.py
+                            └── test_matrix.py
     
 </details>
 
