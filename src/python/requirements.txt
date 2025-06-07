@@ -1,0 +1,2 @@
+pytest
+# Add other dependencies here e.g. matplotlib, numpy

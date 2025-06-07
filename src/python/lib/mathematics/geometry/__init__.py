@@ -1,0 +1,1 @@
+# This file makes 'geometry' a Python sub-package.
