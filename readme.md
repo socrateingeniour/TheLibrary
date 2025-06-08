@@ -101,7 +101,7 @@ The Library is organized thematically, with each major area of mathematics on it
     ├── IDEAS.md                                                    # Brainstorming Log for future concepts.
     │
     ├── docs/                                                       # Project dashboard and documentation site.
-    │   ├── index.html                                              # The main project index.
+    │   ├── index.html                                              # The main project index. 
     │   ├── style.css                                               # Styles for the index.
     │   └── script.js                                               # Scripts for interactivity (filtering tags, etc.).
     │
