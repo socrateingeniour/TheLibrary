@@ -58,21 +58,21 @@ My development plan is structured as follows:
 The Library is organized thematically, with each major area of mathematics on its own "Shelf." Development will proceed shelf by shelf, focusing on creating robust, well-tested components.
 
 **Shelf 1: Foundations**
-*   `[ ] Number Theory:` Euclidean algorithm, prime factorization.
-*   `[ ] Set Theory:` Custom `Set` class with core operations. (Mostly an extention of the already existing Set class in Python & Java)
-*   `[ ] Combinatorics:` Factorials, binomial coefficients.
+*   [ ] `Number Theory:` Euclidean algorithm, prime factorization.
+*   [ ] `Set Theory:` Custom `Set` class with core operations. (Mostly an extention of the already existing Set class in Python & Java)
+*   [ ] `Combinatorics:` Factorials, binomial coefficients.
 
 **Shelf 2: Algebra**
-*   `[ ] Linear Algebra:` `Vector`, `Matrix`, and `Determinant` classes with core operations.
-*   `[ ] Polynomials:` `Polynomial` class with full arithmetic.
-*   `[ ] Abstract Structures:` Interfaces/classes for `Group`, `Ring`, and `Field`.
+*   [ ] `Linear Algebra:` `Vector`, `Matrix`, and `Determinant` classes with core operations.
+*   [ ] `Polynomials:` `Polynomial` class with full arithmetic.
+*   [ ] `Abstract Structures:` Interfaces/classes for `Group`, `Ring`, and `Field`.
 
 **Shelf 3: Analysis**
-*   `[ ] Sequences & Series:` `Sequence` class, convergence tests.
-*   `[ ] Calculus:` Tools for symbolic differentiation and numerical integration.
+*   [ ] `Sequences & Series:` `Sequence` class, convergence tests.
+*   [ ] `Calculus:` Tools for symbolic differentiation and numerical integration.
 
 **Shelf 4: Geometry**
-*   `[ ] Euclidean Space:` `Vector` class with dot products, norms, and angles.
+*   [ ] `Euclidean Space:` `Vector` class with dot products, norms, and angles.
 
 ## 💻 Technologies
 
